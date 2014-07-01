@@ -7,6 +7,10 @@ class WrapperTest extends PHPUnit_Framework_TestCase {
     $wrapper = new Wrapper();
     $this->assertEquals('', $wrapper->wrap(''));
   }
+  function testItShouldNotWrapAShortEnoughWord() {
+    $wrapper = new Wrapper();
+    $this->assertEquals('word', $wrapper->wrap('word', 5));
+  }
 }
 
 ?>

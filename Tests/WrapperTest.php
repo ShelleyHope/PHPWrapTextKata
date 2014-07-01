@@ -13,11 +13,13 @@ class WrapperTest extends PHPUnit_Framework_TestCase {
   function testItShouldWrapAnEmptyString() {
     $this->assertEquals('', $this->wrapper->wrap(''));
   }
+
   function testItShouldNotWrapAShortEnoughWord() {
     $textToBeParsed = 'word';
     $maxLineLength = 5;
-    $this->assertEquals('word', $this->wrapper->wrap($textToBeParsed, $maxLineLength));
+    $this->assertEquals($textToBeParsed, $this->wrapper->wrap($textToBeParsed, $maxLineLength));
   }
+
 }
 
 ?>

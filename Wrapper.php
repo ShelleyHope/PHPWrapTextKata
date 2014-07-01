@@ -1,5 +1,9 @@
 <?php
 
-class Wrapper {}
+class Wrapper {
+  function wrap($text) {
+    return;
+  }
+}
 
 ?>

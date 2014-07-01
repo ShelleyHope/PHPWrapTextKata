@@ -20,6 +20,12 @@ class WrapperTest extends PHPUnit_Framework_TestCase {
     $this->assertEquals($textToBeParsed, $this->wrapper->wrap($textToBeParsed, $maxLineLength));
   }
 
+  function testItWrapsAWordLongerThanLineLength() {
+    $textToBeParsed = 'alongword';
+    $maxLineLength = 5;
+    $this->assertEquals("along\nword", $this->wrapper->wrap($textToBeParsed, $maxLineLength));
+  }
+
 }
 
 ?>

@@ -34,7 +34,7 @@ class WrapperTest extends PHPUnit_Framework_TestCase {
 
   function testItWrapsTwoWordsWhenSpaceAtTheEndOfTheLine() {
     $textToBeParsed = 'word word';
-    $maxLineLength = 5;
+    $maxLineLength = 7;
     $this->assertEquals("word\nword", $this->wrapper->wrap($textToBeParsed, $maxLineLength));
   }
 

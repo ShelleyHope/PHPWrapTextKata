@@ -38,6 +38,12 @@ class WrapperTest extends PHPUnit_Framework_TestCase {
     $this->assertEquals("word\nword", $this->wrapper->wrap($textToBeParsed, $maxLineLength));
   }
 
+  function testItWrapsTwoWordsWhenLineEndIsAfterFirstWord() {
+    $textToBeParsed = 'word word';
+    $maxLineLength = 7;
+    $this->assertEquals("word\nword", $this->wrapper->wrap($textToBeParsed, $maxLineLength));
+  }
+
 }
 
 ?>
